@@ -1,6 +1,6 @@
 <?php
 
-namespace recommend;
+namespace xiuchanghu\recommend;
 
 /**
  * This is just an example.

@@ -1,6 +1,6 @@
-recommend
-=========
-recommend
+yii2-recommend
+==============
+yii2-recommend
 
 Installation
 ------------
@@ -28,4 +28,4 @@ Usage
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-<?= \recommend\AutoloadExample::widget(); ?>```# yii2-recommend
+<?= \xiuchanghu\recommend\AutoloadExample::widget(); ?>```
