@@ -17,5 +17,11 @@
         "psr-4": {
             "recommend\\": ""
         }
+    },
+    "repositories":[
+    {
+        "type": "git",
+        "url": "https://github.com/xiuchanghu/yii2-recommend.git"
     }
+]
 }
