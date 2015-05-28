@@ -28,4 +28,4 @@ Usage
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-<?= \recommend\AutoloadExample::widget(); ?>```
+<?= \recommend\AutoloadExample::widget(); ?>```# yii2-recommend
