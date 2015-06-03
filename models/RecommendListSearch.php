@@ -8,9 +8,9 @@ use yii\data\ActiveDataProvider;
 use xiuchanghu\recommend\models\RecommendList;
 
 /**
- * RecommendlistSearch represents the model behind the search form about `xiuchanghu\recommend\models\RecommendList`.
+ * RecommendListSearch represents the model behind the search form about `xiuchanghu\recommend\models\RecommendList`.
  */
-class RecommendlistSearch extends RecommendList
+class RecommendListSearch extends RecommendList
 {
     /**
      * @inheritdoc
@@ -18,7 +18,7 @@ class RecommendlistSearch extends RecommendList
     public function rules()
     {
         return [
-            [['lid', 'fontnum', 'width', 'height'], 'integer'],
+            [['id', 'fontnum', 'width', 'height'], 'integer'],
             [['name', 'filedir'], 'safe'],
         ];
     }
@@ -56,7 +56,7 @@ class RecommendlistSearch extends RecommendList
         }
 
         $query->andFilterWhere([
-            'lid' => $this->lid,
+            'id' => $this->id,
             'fontnum' => $this->fontnum,
             'width' => $this->width,
             'height' => $this->height,

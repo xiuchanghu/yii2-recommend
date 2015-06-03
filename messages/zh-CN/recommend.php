@@ -1,11 +1,12 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: funson
+ * User: xiuchanghu
  * Date: 2014/10/25
  * Time: 10:33
  */
-
+echo 11;
+exit;
 return [
     'STATUS_ACTIVE' => '启用',
     'STATUS_INACTIVE' => '禁用',
@@ -38,7 +39,7 @@ return [
 
     'Root Catalog' => '顶级目录',
     'Parent ID' => '上级名称',
-    'Title' => '名称',
+    'Name' => '名称',
     'Surname' => '优化名称',
     'Banner' => 'Banner图片',
     'Is Nav' => '导航是否显示',
@@ -69,6 +70,4 @@ return [
     'Tags' => '标签',
     'Click' => '点击数',
     'Author' => '作者',
-
 ];
-

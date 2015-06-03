@@ -13,7 +13,6 @@ class Module extends \yii\base\Module
     public function init()
     {
         parent::init();
-
         if ($this->getIsBackend() === true) {
             $this->setViewPath('@xiuchanghu/recommend/views/backend');
         } else {
@@ -48,8 +47,9 @@ class Module extends \yii\base\Module
      *
      * @return string the translated message.
      */
-    public static function t($category, $message, $params = [], $language = null)
+    public static function t($category, $message, $params = [], $language = 'null')
     {
+        // exit;
         return Yii::t('xiuchanghu/' . $category, $message, $params, $language);
     }
 

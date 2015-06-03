@@ -4,15 +4,15 @@ namespace xiuchanghu\recommend\controllers\backend;
 
 use Yii;
 use xiuchanghu\recommend\models\RecommendList;
-use xiuchanghu\recommend\models\RecommendlistSearch;
+use xiuchanghu\recommend\models\RecommendListSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * RecommendlistController implements the CRUD actions for RecommendList model.
+ * ListController implements the CRUD actions for RecommendList model.
  */
-class RecommendlistController extends Controller
+class ListController extends Controller
 {
     public function behaviors()
     {
@@ -32,7 +32,7 @@ class RecommendlistController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new RecommendlistSearch();
+        $searchModel = new RecommendListSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -62,8 +62,12 @@ class RecommendlistController extends Controller
     {
         $model = new RecommendList();
 
+        if (Yii::$app->request->get('type')) {
+            $model->type = Yii::$app->request->get('type');
+        }
+
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->lid]);
+            return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -82,7 +86,7 @@ class RecommendlistController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->lid]);
+            return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
                 'model' => $model,

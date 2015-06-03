@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model xiuchanghu\recommend\models\RecommendlistSearch */
+/* @var $model xiuchanghu\recommend\models\RecommendListSearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
@@ -15,7 +15,7 @@ use yii\widgets\ActiveForm;
         'method' => 'get',
     ]); ?>
 
-    <?= $form->field($model, 'lid') ?>
+    <?= $form->field($model, 'id') ?>
 
     <?= $form->field($model, 'name') ?>
 
